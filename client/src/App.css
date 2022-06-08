@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+
+}
+
+body{
+  /*
+  --main-bg-white: #9cacef;
+  --main-bg-dark: #142051;
+  --main-bg-back: #4359bd;
+  --main-bg-text-shadow: #29397e
+  */
+  --main-bg-white: #5b5b5b;
+  --main-bg-dark: #0b0b0b;
+  --main-bg-back: #555555;
+  --main-bg-text-shadow: #000000;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body::-webkit-scrollbar{
+  width: 8px;
+  background:  #152152;
+  background: #000000;
+}
+body::-webkit-scrollbar-thumb{
+  background: #808fcf;
+  background: #ffffff;
+  border-radius: 10px;
+}

@@ -1,0 +1,191 @@
+.container-form-container{
+    display: flex;
+    justify-content: center;
+    height: 50rem;
+    margin-right: 10%;
+    animation: mov-div 1s ease 1 0.5s forwards;
+    margin-top: 1.5%;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+}
+
+form{
+    display: column;
+    justify-content: center;
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, var(--main-bg-white), var(--main-bg-dark));
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.765);
+}
+
+.content-form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.content-form textarea{
+    background: linear-gradient(to right, var(--main-bg-dark),  var(--main-bg-white));
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    overflow: scroll;
+    resize: none;
+    text-shadow: 1px 1px 2px black;
+}
+
+.content-form textarea::-webkit-scrollbar{
+    width: 10px;
+    background:  transparent;
+    overflow-x: hidden;
+  }
+.content-form textarea::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, .6);
+    border-radius: 10px;
+    overflow-x: hidden;
+  }
+
+.content-form input{
+    background: linear-gradient(to right, var(--main-bg-dark),  var(--main-bg-white));
+    height: 30px;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.container-form-container select{
+    background: linear-gradient(to right, var(--main-bg-dark),  var(--main-bg-white));
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+option{
+    background-color: #38457b;
+    background-color: #5b5b5b;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content-form button{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    border-right: 3px solid var(--main-bg-text-shadow);
+    border-left: 3px solid var(--main-bg-text-shadow);
+    border-right: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+}
+
+.content-form button:hover{
+    cursor: pointer;
+    text-align: center;
+    width: 40px;
+    background-color: var(--main-bg-back);
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.label_black{
+    color: rgba(0, 0, 0, 0.466);
+    text-shadow: none;
+}
+.end{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.end img{
+    margin-top: 10px;
+    width: 30%;
+    height: 200px;
+    border: none;
+}
+
+.input_send{
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    border-right: 3px solid var(--main-bg-back);
+    border-left: 3px solid var(--main-bg-back);
+    border-right: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+}
+
+.input_send:hover{
+    border: 3px solid var(--main-bg-back);
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.error{
+    margin: 0px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+@media (max-width: 1050px){
+    .container-form-container{
+        width: 100%;
+        margin: 0;
+        display: block;
+        animation: none;
+    }
+    #form{
+        width: 95%;
+        margin: 2.5%;
+        height: 46em;
+    }
+    .end{
+        flex-direction: column;
+    }
+    .end img{
+        height: 8em;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .input_send{
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+    }
+    .content-form textarea, .content-form input{
+        font-size: 12px;
+    }
+    label{
+        font-size: 18px;
+    }
+    .error{
+        font-size: 12px;
+    }
+}

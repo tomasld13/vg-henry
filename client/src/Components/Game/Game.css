@@ -1,0 +1,200 @@
+.container-videoGame{
+    background: linear-gradient(to right, var(--main-bg-white), var(--main-bg-dark));
+    border: none;
+    width: 25%;
+    margin: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.765);
+}
+.container-videoGame a{
+    text-decoration: none;
+}
+
+@keyframes mov-div {
+  to {
+    transform: translateY(0%) translateX(12%);
+    opacity: 1;
+  }
+}
+
+.container-videoGame:hover{
+    cursor: pointer;
+    box-shadow: 10px 10px 15px var(--main-bg-back);
+}
+
+.titulo{
+    margin: 5px;
+    margin-bottom: 3px;
+    color: white;
+    text-decoration: overline;
+    text-shadow: 2px 2px 2px black;
+}
+
+p{
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    margin: 0px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.container-videoGame .features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 1px;
+    background-color: transparent;
+}
+
+.container-videoGame img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+}
+
+.platforms p{
+    margin: 2px;
+    margin: 0px;
+}
+
+#rating-p{
+  color: white;
+  border-radius: 5px;
+}
+
+#rating-p img{
+  width: 1em;
+  height: 1em;
+}
+
+.pGender{
+  margin: 1px;
+}
+
+.features{
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+@media (max-width: 1050px){
+  .container-videoGame{
+    width: 40%;
+  }
+}
+
+@media (max-width: 850px){
+  .container-videoGame{
+      margin-right: 10px;
+      width: 100%;
+  }
+}
+
+@media (max-width: 750px){
+  .container-videoGame{
+    margin-right: 10px;
+    width: 100%;
+  }
+}
+
+
+.circulo {
+    margin: 100px auto;
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .circulo .circulo-hijo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 200px;
+  }
+  .circulo .circulo-hijo:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 15%;
+    background-color: var(--main-bg-back);
+    border-radius: 100%;
+    animation: circuloBounceDelay 1.2s infinite ease-in-out both;
+  }
+  .circulo .circulo2 {            
+    transform: rotate(30deg); 
+  }
+  .circulo .circulo3 {            
+    transform: rotate(60deg); 
+  }
+  .circulo .circulo4 {            
+    transform: rotate(90deg); 
+  }
+  .circulo .circulo5 {
+    transform: rotate(120deg); 
+  }
+  .circulo .circulo6 {
+    transform: rotate(150deg); 
+  }
+  .circulo .circulo7 {
+    transform: rotate(180deg); 
+  }
+  .circulo .circulo8 {
+    transform: rotate(210deg); 
+  }
+  .circulo .circulo9 {
+    transform: rotate(240deg); 
+  }
+  .circulo .circulo10 {
+    transform: rotate(270deg); 
+  }
+  .circulo .circulo11 {
+    transform: rotate(300deg); 
+  }
+  .circulo .circulo12 {
+    transform: rotate(330deg); 
+  }
+  .circulo .circulo2:before {
+    animation-delay: -1.1s; }
+  .circulo .circulo3:before {   
+    animation-delay: -1s; 
+  }
+  .circulo .circulo4:before {
+    animation-delay: -0.9s; 
+  }
+  .circulo .circulo5:before {
+    animation-delay: -0.8s; 
+  }
+  .circulo .circulo6:before {
+    animation-delay: -0.7s; 
+  }
+  .circulo .circulo7:before {
+    animation-delay: -0.6s; 
+  }
+  .circulo .circulo8:before {
+    animation-delay: -0.5s; 
+  }
+  .circulo .circulo9:before {
+    animation-delay: -0.4s; 
+  }
+  .circulo .circulo10:before {
+    animation-delay: -0.3s; 
+  }
+  .circulo .circulo11:before {
+    animation-delay: -0.2s; 
+  }
+  .circulo .circulo12:before {
+    animation-delay: -0.1s; 
+  }
+  
+  @keyframes circuloBounceDelay {
+    0%, 80%, 100% {
+              transform: scale(0);
+    } 40% {
+              transform: scale(1);
+    }
+  }

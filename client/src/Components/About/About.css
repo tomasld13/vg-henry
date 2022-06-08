@@ -1,0 +1,74 @@
+.about-container{
+    text-align: center;
+    background: linear-gradient(to right, var(--main-bg-white), var(--main-bg-dark));
+    width: 60%;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: auto;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.765);
+    animation: mov-about 1s ease 1 0.5s forwards;
+    padding-bottom: 50px;
+}
+
+@keyframes mov-about {
+    to {
+      transform: translateY(0%) translateX(34%);
+      opacity: 1;
+    }
+  }
+
+.about-container h1{
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
+
+.about-container p{
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin: 10px;
+}
+.about-container p a{
+    font-size: 18px;
+    color: white;
+}
+
+.about-container img{
+    width: 100%;
+    background-color: black;
+    border: none;
+    border-radius: 0px;
+}
+
+.about-links a{
+    margin: 10px;
+}
+
+.icon-about{
+    margin-top: 15px;
+    background-color: transparent !important;
+    height: 40px;
+    width: 40px !important;
+}
+
+@media (max-width: 1215px){
+    .about-container{
+        font-size: 12px;
+        width: 90%;
+        margin: 5%;
+        margin-top: 3%;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        animation: none;
+    }
+    .about-container p, .about-container p a{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 550px){
+    .about-container p, .about-container p a{
+        font-size: 14px;
+    }
+}

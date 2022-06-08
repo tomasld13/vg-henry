@@ -1,0 +1,16 @@
+.container-search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+    margin-right: 10%;
+    animation: mov-div 1s ease 1 0.5s forwards;
+}
+
+@media (max-width: 750px){
+    .container-search{
+        width: 100vw;
+        animation: none;
+    }
+}

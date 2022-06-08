@@ -1,0 +1,52 @@
+.welcome{
+    position: relative;
+}
+
+.welcome video{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome h1{
+    background-color: #000;
+    font-size: 240px;
+    text-align: center;
+    mix-blend-mode: multiply;
+}
+
+.welcome h1:hover{
+    text-decoration: underline;
+}
+
+.welcome a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.conteiner{
+    height: 100vh;
+    position: absolute;
+    background-color: #000;
+}
+
+#by{
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.343);
+}
+
+@media (max-width: 1700px){
+    .welcome h1{
+        font-size: 200px;
+    }
+}
+@media (max-width: 1415px){
+    .welcome h1{
+        font-size: 150px;
+    }
+}

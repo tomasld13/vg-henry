@@ -1,0 +1,135 @@
+.conteiner-detail{
+    background-color: transparent;
+    width: 60%;
+    margin: 10px;
+    margin-top: 1.5%;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.538);
+    animation: mov-detail 1s ease 1 0.5s forwards;
+}
+
+@keyframes mov-detail {
+    to {
+      transform: translateY(0%) translateX(30%);
+      opacity: 1;
+    }
+}
+
+.conteiner-detail{
+    font-size: 20px;
+}
+
+.conteiner-detail p{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 4px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.conteiner-detail img{
+    height: 22em;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    border: none;
+}
+
+.description p{
+    color: white;
+}
+
+.pGender{
+    color:white
+}
+
+.platforms p{
+    color: white;
+}
+
+.release-detail{
+    color: white
+}
+
+.description{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--main-bg-white), var(--main-bg-dark));
+}
+
+.not-description{
+    display: flex;
+}
+
+.conteiner_description{
+    border: none;
+    height: 100%;
+}
+
+.title-detail{
+    margin: 0px;
+    margin-bottom: 3px;
+    color: white;
+    text-decoration: overline;
+    text-shadow: 3px 3px 2px black;
+}
+
+.type-detail{
+    color: #5c78f3;
+    color: #ffffff;
+    height: 100%;
+}
+
+.type-detail img{
+    width: 1em;
+    height: 1em;
+}
+
+@media (max-width: 1050px){
+    .conteiner-detail{
+        width: 90%;
+        margin: 5%;
+        margin-top: 2%;
+        animation: none;
+    }      
+}
+
+@media (max-width: 800px){
+    .not-description{
+        display: block;
+    }
+    .conteiner-detail img{
+        height: 18em;
+    }
+    .type-detail img{
+        width: 1em;
+        height: 1em;
+    }
+}
+
+@media (max-width: 660px){
+    .conteiner-detail img{
+        height: 14em;
+    }
+    .type-detail img{
+        width: 1em;
+        height: 1em;
+    }
+}

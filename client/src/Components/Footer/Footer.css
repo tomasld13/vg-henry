@@ -1,0 +1,29 @@
+.footer img{
+    height: 15px;
+    width: 80px;
+    border: none;
+    border-radius: 0;
+}
+.footer h3{
+    font-size: 20px;
+    margin: 0px;
+    color:#29397e;
+    color: white;
+    text-shadow: 1px 1px 2px var(--main-bg-text-shadow);
+}
+.footer h3 a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 2px var(--main-bg-text-shadow);
+}
+.footer{
+    border-top: 4px;
+    border-bottom: 4px;
+    position:absolute; 
+    margin-top: 100%;
+    bottom:0; 
+    left:0; 
+    width: 100%;
+    background: linear-gradient(to right, var(--main-bg-white), var(--main-bg-dark));
+}
