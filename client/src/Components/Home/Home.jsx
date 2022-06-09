@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from "react"
 import {useDispatch, useSelector} from "react-redux"
-import {getAllVideogames, getAllGenres, cleanID} from "../../Redux/actions.js"
+import {getAllVideogames, getAllGenres, cleanID, setPage, setRating, setPlatforms, setGenres, setOrigin, setOrder} from "../../Redux/actions.js"
 import {Nav} from "../Nav/Nav"
 import Game from "../Game/Game.jsx"
 import arrow from "../props/arrow-icon-b.png"
@@ -10,14 +10,20 @@ import { Footer } from "../Footer/Footer.jsx"
 
 export function Home(){
 
+    const order_s = useSelector(state => state.order)
+    const rating_s = useSelector(state => state.rating)
+    const platforms_s = useSelector(state => state.platforms)
+    const genres_s = useSelector(state => state.genres_filter)
+    const origin_s = useSelector(state => state.origin)
+    const pagina = useSelector(state => state.page)
     const dispatch = useDispatch()
     const [state, setState] = useState({
-        order:"",
-        rating: "",
-        page: 0,
-        platforms: "",
-        genres: "",
-        origin: "all",
+        order: order_s,
+        rating: rating_s,
+        page: pagina,
+        platforms: platforms_s,
+        genres: genres_s,
+        origin: origin_s,
         notFound: 0
     })
     const videoState = useSelector(state => state.videogames)
@@ -66,6 +72,7 @@ export function Home(){
     //-------------------------------------------------------//
     let gif = require("../props/crash-sad-unscreen.gif")
     //-------------------------------------------------------//
+    console.log(state)
     useEffect(() => {
         if(!videoState || videosOrigin.length === 0){
             dispatch(getAllGenres())
@@ -78,6 +85,22 @@ export function Home(){
         //hasta que vuelva a cargar el siguiente.
         dispatch(cleanID())
     }, [])
+
+    useEffect(() => {
+        dispatch(setOrder(state.order))
+        dispatch(setRating(state.rating))
+        dispatch(setPlatforms(state.platforms))
+        dispatch(setGenres(state.genres))
+        dispatch(setOrigin(state.origin))
+        dispatch(setPage(state.page))
+        document.getElementById("order").value = state.order
+        document.getElementById("rating").value = state.rating
+        document.getElementById("platforms").value = state.platforms
+        document.getElementById("genres").value = state.genres
+        document.getElementById("origin").value = state.origin
+        document.getElementById("page").value = state.page
+    },[state])
+
     //-------------------------------------------------------//
     function handleInputChange(e){
         setState({
@@ -148,9 +171,11 @@ export function Home(){
         let plat = videosOrigin.filter(v => v.platforms.includes(state.platforms))
         arr = quince(plat)
         videos = arr[state.page]
-        document.getElementById("page").value = state.page
-        document.getElementById("genres").value = ""
-        document.getElementById("origin").value = "all"
+        //document.getElementById("page").value = state.page
+        //document.getElementById("genres").value = ""
+        if(document.getElementById("origin")) document.getElementById("origin").value = "all"
+        if(document.getElementById("platforms")) document.getElementById("platforms").value = state.platforms
+        if(document.getElementById("genres")) document.getElementById("genres").value = ""
         if(!videos || videos.length === 0) {
             state.notFound = 404
         }else{
@@ -160,9 +185,10 @@ export function Home(){
         let gen = videosOrigin.filter(v => v.genres.includes(parseInt(state.genres)))
         arr = quince(gen)
         videos = arr[state.page]
-        document.getElementById("page").value = state.page
-        document.getElementById("platforms").value = ""
-        document.getElementById("origin").value = "all"
+        //document.getElementById("page").value = state.page
+        if(document.getElementById("origin")) document.getElementById("origin").value = "all"
+        if(document.getElementById("platforms")) document.getElementById("platforms").value = ""
+        if(document.getElementById("genres")) document.getElementById("genres").value = state.genres
         if(!videos || videos.length === 0) {
             state.notFound = 404
         }else{
@@ -170,7 +196,7 @@ export function Home(){
         }
     }else{
         //En caso de que no se seleccione ningun filtro los juegos se vuelven a mostrar con normalidad.
-        if(document.getElementById("page")!== null) document.getElementById("page").value = state.page
+        if(document.getElementById("page") !== null) document.getElementById("page").value = state.page
         arr = quince(videosOrigin)
         videos = arr[state.page]
     }
@@ -179,9 +205,9 @@ export function Home(){
     //Se le avisa al usuario y se resetea el origin.
     if(state.origin === "api"){
         videos = videos.filter(v => typeof v.id === "number")
-        document.getElementById("page").value = state.page
-        document.getElementById("platforms").value = ""
-        document.getElementById("genres").value = ""
+        //document.getElementById("page").value = state.page
+        if(document.getElementById("platforms")) document.getElementById("platforms").value = ""
+        if(document.getElementById("genres")) document.getElementById("genres").value = ""
         if(!videos || videos.length < 1) {
             state.notFound = 404
         }else{
@@ -191,9 +217,9 @@ export function Home(){
         let dbs = videosOrigin.filter(v => typeof v.id === "string")
         arr = quince(dbs)
         videos = arr[state.page]
-        document.getElementById("page").value = state.page
-        document.getElementById("platforms").value = ""
-        document.getElementById("genres").value = ""
+        //document.getElementById("page").value = state.page
+        if(document.getElementById("platforms")) document.getElementById("platforms").value = ""
+        if(document.getElementById("genres")) document.getElementById("genres").value = ""
         if(!videos || videos.length < 1) {
             state.notFound = 404
         }else{
