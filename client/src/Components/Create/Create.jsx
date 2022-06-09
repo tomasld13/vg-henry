@@ -50,9 +50,8 @@ export function Create() {
     useEffect(() => {
         if(genreState.length === 0){
             dispatch(getAllGenres())
-        }else if(videos.length === 0){
-            dispatch(getAllVideogames())
         }
+        dispatch(getAllVideogames())
     },[])
     //-------------------------------------------------------//
     //Se chequea que valor tiene el evento que llamo al handleInputChange y dependiendo cual sea el mismo
@@ -141,8 +140,8 @@ export function Create() {
         validate(state)
         if(!error.title && !error.description && !error.genres && !error.platforms && error.image.length === 0 && !inVideos()){
             postVideo(state)
-            dispatch(getAllVideogames())
             alert("¡Tu juego fue cargado exitosamente!")
+            window.location.reload()
         }else if(inVideos()){
             alert("Ya existe un juego con ese nombre.")
         }else{
