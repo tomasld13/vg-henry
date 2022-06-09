@@ -106,6 +106,10 @@ export function Create() {
         //El titulo no puede: ser nulo o incluir caracteres peligrosos.
         if(!input.title || input.title?.length < 1 || input.title?.includes("<") || input.title?.includes(">") || input.title?.includes("@")) errores.title = "Debes ingresar un titulo sin caracteres especiales."
         
+        //La descripción no puede ser: Menor a 50 caracteres, tener menos de 5 palabras, ni incluir caracteres peligrosos.
+        if(!input.description || input.description?.length < 50 || input.description?.split(" ").length <= 5 || input.description?.includes("<") || input.description?.includes(">") || input.description?.includes("@")) errores.description = "Debes ingresar una descripcion de al menos 50 caracteres con más de 5 palabras, sin caracteres especiales."
+        
+        //Al menos un genero es necesario.
         if(input.genres?.length < 1) errores.genres = "Debe seleccionar al menos un genero."
         
         //Al menos una plataforma es necesaria.
