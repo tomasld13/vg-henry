@@ -25,6 +25,6 @@ const {getAllGenres} = require('./src/getAllGenres.js');
 conn.sync({ force: false }).then(() => {
   server.listen(process.env.PORT, async () => {
     console.log(`%s listening at ${process.env.PORT}`); // eslint-disable-line no-console
-    //await getAllGenres(API_KEY)
+    await getAllGenres(API_KEY)
   });
 });
