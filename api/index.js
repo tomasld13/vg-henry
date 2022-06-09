@@ -22,7 +22,7 @@ const { conn, API_KEY } = require('./src/db.js');
 const {getAllGenres} = require('./src/getAllGenres.js');
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(process.env.PORT, async () => {
     console.log(`%s listening at ${process.env.PORT}`); // eslint-disable-line no-console
     await getAllGenres(API_KEY)
