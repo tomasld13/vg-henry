@@ -109,16 +109,16 @@ export function Create() {
         if(!input.description || input.description?.length < 50 || input.description?.split(" ").length <= 5 || input.description?.includes("<") || input.description?.includes(">") || input.description?.includes("@")) errores.description = "Debes ingresar una descripcion de al menos 50 caracteres con más de 5 palabras, sin caracteres especiales."
         
         //Al menos un genero es necesario.
-        if(input.genres?.length < 1) errores.genres = "Debe seleccionar al menos un genero."
+        if(input.genres?.length < 1) errores.genres = "Debes seleccionar al menos un genero."
         
         //Al menos una plataforma es necesaria.
-        if(input.platforms?.length < 1) errores.platforms = "Debe ingresar al menos una plataforma."
+        if(input.platforms?.length < 1) errores.platforms = "Debes ingresar al menos una plataforma."
         
         //El rating no puede ser mayor a 5 ni menor a 0.
         if(input.rating > 5 || input.rating < 0) errores.rating = "El valor debe estar dentro del rango de 0-5"
         
         //Si la imagen retorna un error es porque se cargo un link invalido, por lo que se solicita uno nuevo.
-        if(input._reactName === "onError") errImg = "Debe ingresar una imagen valida."
+        if(input._reactName === "onError") errImg = "Debes ingresar una dirección de imagen valida."
         if(input._reactName === "onLoad") errImg = ""
         errores.image = errImg
         

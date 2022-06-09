@@ -12,7 +12,7 @@ export function About() {
         <div className="about-container">
           <h1>Proyecto Individual VideoGames</h1>
           <p>Está página es un proyecto que realicé para presentar el mismo en el bootcamp de Henry.<br/>
-            El objetivo del este era construir una App utilizando React, Redux, Node y Sequelize; aprender mejores prácticas; familiarizarce con el workflow de GIT; y por ultimo, crear testing en la app haciendo uso de Jest.
+            El objetivo de este era: construir una App utilizando React, Redux, Node y Sequelize; aprender mejores prácticas; familiarizarce con el workflow de GIT; y por ultimo, crear testing en la app haciendo uso de Jest.
             <br/>La API desde donde vienen los videojuegos es 
             <a href='https://rawg.io/apidocs'
             target="_blank" 
