@@ -1,6 +1,6 @@
 import React from 'react'
 import {useEffect} from "react"
-import {useLocation} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
 import {getAllGenres, getVideoID} from "../../Redux/actions.js"
 import {Nav} from "../Nav/Nav"
@@ -17,8 +17,7 @@ export function Detail() {
     date = v.release_date&&date[2]+"-"+date[1]+"-"+date[0]
     //-------------------------------------------------------//
     //Se toma el id desde la url y se envia la peticion al servidor.
-    let id = useLocation()
-    id = id.pathname.slice(6,id.length)
+    let id = useParams().id
     //-------------------------------------------------------//
     //Se pide el juego y en caso de que no haya generos en el store, se hace un dispatch
     useEffect(() => {
