@@ -37,7 +37,7 @@ export function About() {
           rel='noopener noreferrer'>
             <img src={linkedIn} className="icon-about" alt="linkedin-icon"></img>
           </a>
-          <a href='https://www.github.com/tomasld13/PI-VideoGames-Henry' 
+          <a href='https://github.com/tomasld13/vg-henry' 
           target="_blank" 
           rel='noopener noreferrer'>
             <img src={git} className="icon-about" alt="github-icon"></img>
