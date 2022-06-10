@@ -18,13 +18,14 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
-const { conn, API_KEY } = require('./src/db.js');
+const { conn, API_KEY, Videogame } = require('./src/db.js');
 const {getAllGenres} = require('./src/getAllGenres.js');
 
 // Syncing all the models at once.
 conn.sync({ alert: true }).then(() => {
   server.listen(process.env.PORT, async () => {
     console.log(`%s listening at ${process.env.PORT}`); // eslint-disable-line no-console
+    await Videogame.destroy({where: {id: "43451440-e073-4152-a499-de46c42d196f"}});
     //await getAllGenres(API_KEY)
   });
 });
