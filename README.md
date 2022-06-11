@@ -4,6 +4,7 @@
 
 # Individual Project - Henry Videogames
 Por Tomás Ledesma.
+Deploy: https://vg-henry.vercel.app/
 ## Objetivos del Proyecto
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
